@@ -1,2 +1,2 @@
-#!?bin/bash
+#!bin/bash
 prinf "%2.f\n" $NUM
