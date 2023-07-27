@@ -3,7 +3,7 @@
 
 count=1
 
-while [[ $count -le 11 ]]; 
+while [[ $count -le 10 ]]; 
 do
 	echo "Best School"
 	((count++))
