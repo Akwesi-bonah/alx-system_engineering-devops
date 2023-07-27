@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 time
+
+count=1
+
+while [[ $count -le 11 ]]; 
+do
+	echo "Best School"
+	((count++))
+done

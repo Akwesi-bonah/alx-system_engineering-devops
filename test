@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+let "(z=5**2)"
+z=z
+
+echo $z
