@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 # This script is displaying "Best School" 10 time
-
+# but for the 9th iteration Best School then Hi
 count=1
 
-while [[ $count -le 10 ]];
+while [[ $count -le 10 ]]
 do
-	if [ $count -eq 9 ]; then
+	if [ $count -eq 9 ]
+	then
+		echo "Best School"
 		echo "Hi"
 	else
 		echo "Best School"

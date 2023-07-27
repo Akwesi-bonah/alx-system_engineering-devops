@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
-
 # This script prints the all content of the current directory
-
 for i in *
 do
-	[[ -e "$i" ]]
-	echo "$i" | cut -d '-' -f2
+    [[ -e "$i" ]]
+    echo "$i" | cut -d '-' -f2
 done
