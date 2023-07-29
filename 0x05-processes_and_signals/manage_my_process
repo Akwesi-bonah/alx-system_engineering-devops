@@ -4,7 +4,9 @@
 # In between every I am alive! message 
 # the program should pause for 2 seconds
 
-for ((;;))
+echo "$$" > /var/run/my_process.pid
+
+for ((;;)
 do
 	echo "I am alive" >> /tmp/my_process
 done
