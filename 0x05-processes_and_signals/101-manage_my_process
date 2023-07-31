@@ -18,7 +18,7 @@ case "$1" in
 		rm /var/run/my_process.pid
 		./manage_my_process &
 		echo "$!" > /var/run/my_process.pid
-		echo "manage_my_process restart"
+		echo "manage_my_process restarted"
 		;;
 	*)
 		echo "Usage: manage_my_process {start|stop|restart}"
