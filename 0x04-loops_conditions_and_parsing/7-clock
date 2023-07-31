@@ -5,15 +5,14 @@
 hours=0
 min=1
 
-while [[ $hours -le 12 ]];
+while [ $hours -le 12 ]
 do
 	echo "Hour: $hours"
 	while [ $min -le 59 ]
 	do
 		echo "$min"
-		((min++))
+		let min++
 	done
-	min=1
-        ((hours++))
+	let min=1
+        let hours++
 done
-~                                                                                                        ~      
