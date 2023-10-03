@@ -7,11 +7,8 @@ apt-get -y install nginx
 
 # Create a simple "Hello World!" HTML page
 echo "Hello World!" > /var/www/html/index.nginx-debian.html
-
-# Create a custom 404 HTML page
 echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
 
-# Modify Nginx default site configuration to include custom header and custom 404 page
 sed -i "/server_name _;/a \\
 \trewrite ^\/redirect_me https:\/\/github.com\/Akwesi-bonah permanent;\\
 \\
@@ -27,4 +24,9 @@ sed -i "/include \/etc\/nginx\/sites-enabled\/\*;/a \\
 
 # Start Nginx service
 service nginx start
+sed -i "/include \/etc\/nginx\/sites-enabled\/\*;/a \\
+\tadd_header X-Served-By \"$HOSTNAME\";" /etc/nginx/nginx.conf
 
+# Add custom header configuration to nginx.conf
+sed -i "/include \/etc\/nginx\/sites-enabled\/\*;/a \\
+\tadd_header X-Served-By \"$HOSTNAME\";" /etc/nginx/nginx.conf
