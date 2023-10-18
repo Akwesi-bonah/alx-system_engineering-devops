@@ -4,7 +4,9 @@
 """
 
 import requests
+import json
 import sys
+
 
 if __name__ == "__main__":
     user_id = sys.argv[1]
@@ -13,8 +15,6 @@ if __name__ == "__main__":
                              .format(user_id)).json()
     todos_url = requests.get(base_url + 'todos?userId={}'
                              .format(user_id)).json()
-
-    import json
 
     with open('{}.json'.format(user_id), 'w') as jsonfile:
         json.dump({user_id: [
