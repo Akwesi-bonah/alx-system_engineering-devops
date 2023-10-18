@@ -3,8 +3,9 @@
     Python script that, using this REST API, for a given employee ID,
 """
 
-import requests
+
 import json
+import requests
 import sys
 
 
