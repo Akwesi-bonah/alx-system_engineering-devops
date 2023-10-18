@@ -22,11 +22,5 @@ sed -i "/server_name _;/a \\
 sed -i "/include \/etc\/nginx\/sites-enabled\/\*;/a \\
 \tadd_header X-Served-By \"$HOSTNAME\";" /etc/nginx/nginx.conf
 
-# Start Nginx service
-service nginx start
-sed -i "/include \/etc\/nginx\/sites-enabled\/\*;/a \\
-\tadd_header X-Served-By \"$HOSTNAME\";" /etc/nginx/nginx.conf
-
-# Add custom header configuration to nginx.conf
-sed -i "/include \/etc\/nginx\/sites-enabled\/\*;/a \\
-\tadd_header X-Served-By \"$HOSTNAME\";" /etc/nginx/nginx.conf
+# reStart Nginx service
+service nginx restart
