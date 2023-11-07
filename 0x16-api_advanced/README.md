@@ -1,0 +1,14 @@
+# 0x16. API advanced
+Questions involving APIs are common for interviews. Sometimes they’re as simple as ‘write a Python script that queries a given endpoint’, sometimes they require you to use recursive functions and format/sort the results.
+
+![api](api.png)
+
+## Learning Objectives
+At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
+
+## General
+- How to read API documentation to find the endpoints you’re looking for
+- How to use an API with pagination
+- How to parse JSON results from an API
+- How to make a recursive API call
+- How to sort a dictionary by value
