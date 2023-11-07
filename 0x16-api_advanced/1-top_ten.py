@@ -5,7 +5,8 @@ import requests
 
 
 def top_ten(subreddit):
-    """Function to return the number of hot topics listed for a given subreddit"""
+    """Function to return the number of hot
+    topics listed for a given subreddit"""
 
     if subreddit is None or type(subreddit) is not str:
         print("None")
