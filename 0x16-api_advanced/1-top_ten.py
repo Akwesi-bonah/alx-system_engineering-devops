@@ -8,11 +8,12 @@ def top_ten(subreddit):
     """Function to return the number of hot topics listed for a given subreddit"""
 
     if subreddit is None or type(subreddit) is not str:
-        print(None)
+        print("None")
         return
     else:
         url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
-        headers = {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:72.0)\
+        headers = {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; '
+                                 'Linux x86_64; rv:72.0)\
         Gecko/20100101 Firefox/72.0'}
         params = {'limit': 10}
         response = requests.get(url, params=params,
@@ -23,7 +24,8 @@ def top_ten(subreddit):
             return
         else:
             results = response.json().get("data")
-            [print(c.get("data").get("title")) for c in results.get("children")]
+            [print(c.get("data").get("title"))
+             for c in results.get("children")]
 
 
 if __name__ == '__main__':
