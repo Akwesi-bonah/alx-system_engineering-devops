@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """Module to query the Reddit API and returns
 the number of hot topics listed for a given subreddit"""
 import requests
