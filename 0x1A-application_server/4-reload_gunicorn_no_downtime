@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 # Gracefully reloads Gunicorn.
-
 PID=$(pgrep gunicorn | head -n 1)
 kill -HUP "$PID"
